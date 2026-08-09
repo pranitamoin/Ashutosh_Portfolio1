@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-navy: var(--primary-navy);
+  --color-royal: var(--royal-blue);
+  --color-light-gray: var(--light-gray);
+  --color-dark-gray: var(--dark-gray);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-section-bg: var(--section-bg);
+  
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+}
+
+:root {
+  --primary-navy: #0A2540;
+  --royal-blue: #2563EB;
+  --light-gray: #F8FAFC;
+  --dark-gray: #334155;
+  --card-bg: #FFFFFF;
+  --card-border: #E2E8F0;
+  --section-bg: #F8FAFC;
+  
+  --background: #FFFFFF;
+  --foreground: #334155;
+}
+
+.dark {
+  --primary-navy: #F8FAFC;
+  --royal-blue: #3B82F6;
+  --light-gray: #1E293B;
+  --dark-gray: #94A3B8;
+  --card-bg: #111827;
+  --card-border: #1F2937;
+  --section-bg: #0E1524;
+  
+  --background: #090D16;
+  --foreground: #E2E8F0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--royal-blue);
+}
+
+/* Typographic utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+}
+
+.font-num {
+  font-family: var(--font-space-grotesk);
+}
+
